@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import CarDetails from './CarDetails'
-import CardDetails from './CardDeatils'
+import CardDetails from './CardDetails'
 import Error from './Error'
 
 function ParentForm() {
@@ -12,7 +12,6 @@ function ParentForm() {
   const [firstNameError, setFirstNameError] = useState(false)
   const [lastNameError, setLastNameError] = useState(false)
 
-  // Move next or previous
   const nextStep = () => setStep((prev) => prev + 1)
   const prevStep = () => setStep((prev) => prev - 1)
 
@@ -29,7 +28,11 @@ function ParentForm() {
   return (
     <div className='h-[100vh] w-[100vw] bg-gray-900 text-white flex justify-center items-center'>
       {step === 1 && (
-        <form onSubmit={handleUserSubmit} className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'>
+        <form
+          id="step1"
+          onSubmit={handleUserSubmit}
+          className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'
+        >
           <h2 className='text-xl mb-7'>User Details</h2>
 
           <label htmlFor="first_name" className='text-2xl'>First Name: </label>

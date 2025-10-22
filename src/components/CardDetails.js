@@ -7,7 +7,11 @@ function CardDetails({ card, setCard, prevStep }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'>
+    <form
+      id="step3"
+      onSubmit={handleSubmit}
+      className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'
+    >
       <h2 className='text-xl mb-7'>Card Details</h2>
 
       <label htmlFor="card_info" className='text-2xl'>Card CVV: </label>

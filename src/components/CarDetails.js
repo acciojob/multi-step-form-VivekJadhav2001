@@ -1,14 +1,17 @@
 import React from 'react'
 
 function CarDetails({ car, setCar, nextStep, prevStep }) {
-
   function handleSubmit(e) {
     e.preventDefault()
     if (car.model.trim() && car.price.trim()) nextStep()
   }
 
   return (
-    <form onSubmit={handleSubmit} className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'>
+    <form
+      id="step2"
+      onSubmit={handleSubmit}
+      className='w-[40vw] border-2 border-white h-[70vh] flex justify-center items-center flex-col'
+    >
       <h2 className='text-xl mb-7'>Car Details</h2>
 
       <label htmlFor="model" className='text-2xl'>Model: </label>

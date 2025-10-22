@@ -17,7 +17,7 @@ function ParentForm() {
 
     function handleUserSubmit(e) {
         e.preventDefault();
-        nextStep(); // ✅ Go directly to step 2 so Cypress can find #step2
+        nextStep(); 
     }
 
     return (
